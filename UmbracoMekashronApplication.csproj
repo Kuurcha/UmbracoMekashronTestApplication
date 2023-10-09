@@ -4,6 +4,12 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="example\**" />
+    <Content Remove="example\**" />
+    <EmbeddedResource Remove="example\**" />
+    <None Remove="example\**" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Umbraco.Cms" Version="12.2.0" />
@@ -32,6 +38,7 @@
 
   <ItemGroup>
     <None Include="E:\Umbraco Test\UmbracoMekashronApplication\.editorconfig" />
+    <None Include="wwwroot\css\main.css" />
   </ItemGroup>
 
 </Project>
