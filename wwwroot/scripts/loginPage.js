@@ -1,8 +1,10 @@
+
 const alertTrigger = document.getElementById('loginBtn')
 if (alertTrigger) {
     alertTrigger.addEventListener('click', () => {
         console.log("button click!");
         const alertPlaceholder = document.getElementById('loginAlertPlaceholder')
+        alertPlaceholder.innerHTML = ""
         const appendAlert = (message, type) => {
             const wrapper = document.createElement('div')
             wrapper.innerHTML = [
