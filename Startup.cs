@@ -48,6 +48,7 @@ namespace UmbracoMekashronApplication
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+
             }
 
             app.UseUmbraco()
@@ -55,6 +56,7 @@ namespace UmbracoMekashronApplication
                 {
                     u.UseBackOffice();
                     u.UseWebsite();
+
                 })
                 .WithEndpoints(u =>
                 {
