@@ -1,5 +1,6 @@
 using AutoMapper;
 using UmbracoMekashronApplication.Config;
+using UmbracoMekashronApplication.Services;
 
 namespace UmbracoMekashronApplication
 {
@@ -41,6 +42,7 @@ namespace UmbracoMekashronApplication
 
             IMapper mapper = mapperConfig.CreateMapper();
             services.AddSingleton(mapper);
+            services.AddTransient<ISoapService, LoginSoapService>();
             services.AddUmbraco(_env, _config)
                 .AddBackOffice()
                 .AddWebsite()
