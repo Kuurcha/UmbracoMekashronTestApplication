@@ -1,3 +1,6 @@
+using AutoMapper;
+using UmbracoMekashronApplication.Config;
+
 namespace UmbracoMekashronApplication
 {
     public class Startup
@@ -30,6 +33,14 @@ namespace UmbracoMekashronApplication
         /// </remarks>
         public void ConfigureServices(IServiceCollection services)
         {
+
+            var mapperConfig = new MapperConfiguration(mc =>
+            {
+                mc.AddProfile(new MappingProfile());
+            });
+
+            IMapper mapper = mapperConfig.CreateMapper();
+            services.AddSingleton(mapper);
             services.AddUmbraco(_env, _config)
                 .AddBackOffice()
                 .AddWebsite()
