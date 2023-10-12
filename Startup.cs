@@ -1,5 +1,6 @@
 using AutoMapper;
 using UmbracoMekashronApplication.Config;
+using UmbracoMekashronApplication.Middleware;
 using UmbracoMekashronApplication.Services;
 
 namespace UmbracoMekashronApplication
@@ -63,12 +64,13 @@ namespace UmbracoMekashronApplication
                 app.UseDeveloperExceptionPage();
 
             }
-
+            app.UseMiddleware<ExceptionMiddleware>();
             app.UseUmbraco()
                 .WithMiddleware(u =>
                 {
                     u.UseBackOffice();
                     u.UseWebsite();
+
 
                 })
                 .WithEndpoints(u =>
@@ -77,6 +79,7 @@ namespace UmbracoMekashronApplication
                     u.UseBackOfficeEndpoints();
                     u.UseWebsiteEndpoints();
                 });
+
         }
     }
 }

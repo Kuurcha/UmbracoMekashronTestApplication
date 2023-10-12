@@ -5,7 +5,7 @@ namespace UmbracoMekashronApplication.Services
 {
     public class LoginSoapService : ISoapService
     {
-        private readonly string SoapServeiceURI = "http://isapi.icu-tech.com/icutech-test.dll/soap/IICUTech";
+        private readonly string SoapServeiceURI = "ЧЁ";
         public string ParseSoapResponse(string soapResponse)
         {
             XDocument xdoc = XDocument.Parse(soapResponse);
