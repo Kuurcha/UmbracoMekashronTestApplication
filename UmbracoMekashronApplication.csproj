@@ -41,10 +41,10 @@
 
   <ItemGroup>
     <None Include="E:\Umbraco Test\UmbracoMekashronApplication\.editorconfig" />
-    <None Include="wwwroot\css\main.css" />
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="wwwroot\css\" />
     <Folder Include="wwwroot\media\" />
   </ItemGroup>
 
