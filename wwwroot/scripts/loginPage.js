@@ -48,8 +48,8 @@ const alertTrigger = document.getElementById('loginBtn')
 if (alertTrigger) {
     alertTrigger.addEventListener('click', () => {
 
-        const _email = $('#exampleInputEmail1').val();
-        const _password = $('#exampleInputPassword1').val();
+        let _email = $('#exampleInputEmail1').val();
+        let _password = $('#exampleInputPassword1').val();
         if (_email)
             _email = _email.substring(0, 256);
         if (_password)
