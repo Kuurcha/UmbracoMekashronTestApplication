@@ -48,15 +48,15 @@ const alertTrigger = document.getElementById('loginBtn')
 if (alertTrigger) {
     alertTrigger.addEventListener('click', () => {
 
-        let _email = $('#exampleInputEmail1').val();
-        let _password = $('#exampleInputPassword1').val();
-        if (_email)
-            _email = _email.substring(0, 256);
-        if (_password)
-            _password = _email.substring(0, 256);
+        let emailForm = $('#exampleInputEmail1').val();
+        let passwordForm = $('#exampleInputPassword1').val();
+        if (emailForm)
+            emailForm = emailForm.substring(0, 256);
+        if (passwordForm)
+            passwordForm = passwordForm.substring(0, 256);
         let data = {
-            email: _email,
-            password: _password
+            email: emailForm,
+            password: passwordForm
         };
 
         // Send POST request using AJAX
