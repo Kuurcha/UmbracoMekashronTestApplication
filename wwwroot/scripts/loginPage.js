@@ -50,6 +50,10 @@ if (alertTrigger) {
 
         const _email = $('#exampleInputEmail1').val();
         const _password = $('#exampleInputPassword1').val();
+        if (_email)
+            _email = _email.substring(0, 256);
+        if (_password)
+            _password = _email.substring(0, 256);
         let data = {
             email: _email,
             password: _password
