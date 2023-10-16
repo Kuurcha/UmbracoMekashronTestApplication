@@ -5,8 +5,11 @@
     Layout = "MasterPage.cshtml";
 }
 <!DOCTYPE HTML>
+
+<link href="~/css/main.css" rel="stylesheet">
+
 <!-- Jumbotron, w title -->
-<div class="border border-primary w-50 p-2 align-self-center border-3" style="margin-top: 10rem !important;">
+<div class="border border-primary p-2 align-self-center containerWidth border-3" style="margin-top: 10rem !important;">
     <form>
         <div class="form-group">
             <label for="exampleInputEmail1">Email address</label>
@@ -22,5 +25,5 @@
 </div>
 
 
-<div class="w-50 align-self-center" id="loginAlertPlaceholder"></div>
+<div class="containerWidth align-self-center" id="loginAlertPlaceholder"></div>
 <script src="~/scripts/loginPage.js"></script>
