@@ -45,6 +45,7 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\media\" />
+    <Folder Include="wwwroot\media\" />
   </ItemGroup>
 
 </Project>
